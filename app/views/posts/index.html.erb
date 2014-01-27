@@ -1,7 +1,11 @@
-<% @posts.each do |post| %>
-  <h3 class='votes_count' data-id='<%= post.id %>'><%= post.points %></h3>
-  <%= button_to 'Upvote', post_votes_path(post, up: true), remote: true %>
-  <%= button_to 'Downvote', post_votes_path(post, up: false), remote: true %>
-  <h1><%= post.title %></h1>
-  <p><%= post.description %></p>
-<% end %>
+<div class='post-container'>
+  <% @posts.each do |post| %>
+    <div class='post'>
+      <h1><%= post.title %></h1>
+      <h3 class='votes_count' data-id='<%= post.id %>'><%= post.points %></h3>
+      <%= button_to 'Upvote', post_votes_path(post, up: true), remote: true %>
+      <%= button_to 'Downvote', post_votes_path(post, up: false), remote: true %>
+      <p><%= post.description %></p>
+    </div>
+  <% end %>
+</div>

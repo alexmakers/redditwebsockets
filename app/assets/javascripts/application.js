@@ -12,6 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.tinysort
 //= require websocket_rails/main
 //= require_tree .
-
